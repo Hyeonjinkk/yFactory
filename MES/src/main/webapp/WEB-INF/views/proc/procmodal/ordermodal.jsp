@@ -278,9 +278,8 @@ $(function(){
 				   
 							for (var i = 0; i < result.length; i++) {
 								resultGrid.appendRow(result[i]);
-								
+
 							}
-							//resultGrid.appendRow(result, {at : 0});  
 								
 			
 				   })
@@ -307,8 +306,6 @@ $(function(){
 							for (var i = 0; i < result.length; i++) {
 								resultGrid.appendRow(result[i]);
 							}
-							//resultGrid.appendRow(result, {at : 0});  
-							//resultGrid.setValue(0,'계획량','테스트');	
 			
 				   })
 		} 

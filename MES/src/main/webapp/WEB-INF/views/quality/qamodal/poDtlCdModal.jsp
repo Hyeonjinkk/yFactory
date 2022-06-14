@@ -20,8 +20,8 @@
 				<div class="modal-body">
 					<div class="col-md-8 " style="padding-bottom: 20px;">
 						<div class="input-group ">
-							<label for="inputText" class="col-form-label" style="padding-right: 10px;">자재명</label> 
-							<input type="text" class="form-control" style="width: 50px" id="mtName" placeholder="자재명">
+							<label for="inputText" class="col-form-label" style="padding-right: 10px;">발주코드</label> 
+							<input type="text" class="form-control" style="width: 50px" id="mtName" placeholder="발주코드">
 							<a class="nav-link nav-icon search-bar-toggle " id="mtNameSearch" onclick="mtNameSearch">
 								<i class="bi bi-search" style="color: #2c3e50"></i>
 							</a>

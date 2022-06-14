@@ -521,8 +521,17 @@ function makeUUID(){
 									processData: false,
 									contentType: false,
 									success : function(){
+										
+										toastr.options = {
+									            closeButton: false,
+									            progressBar: true,
+									            timeOut: 1200
+									        	};
 										toastr.success('등록완료!');
-										$("#frm").prop('action' , "eqMngPage"); 
+										$("#frm").prop('action' , "eqMngPage");
+										setTimeout(function(){
+											location.reload(); // 등록이 완료된다면 새로고침을 진행
+										}, 1500);
 										
 										//$("form").submit();
 										
@@ -540,6 +549,8 @@ function makeUUID(){
 									}
 									
 									
+								
+									 
 								}); // END OF AJAX
 								
 								

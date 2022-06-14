@@ -21,7 +21,7 @@
 					<div class="col-md-8" style="padding-bottom: 20px;">
 						<div class="input-group">
 							<label for="inputText" class="col-form-label" style="padding-right: 10px;">불량명</label> 
-							<input type="text" class="form-control" style="width: 50px" id="errName" placeholder="자재명">
+							<input type="text" class="form-control" style="width: 50px" id="errName" placeholder="불량명">
 							<a class="nav-link nav-icon search-bar-toggle " id="errNameSearch" onclick="errNameSearch">
 								<i class="bi bi-search" style="color: #2c3e50"></i>
 							</a>

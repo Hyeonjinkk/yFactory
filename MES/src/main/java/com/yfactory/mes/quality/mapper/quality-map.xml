@@ -147,20 +147,15 @@
 	
 	<!-- 자재 품질검사요청(modal) 조회 -->
 	<select id="searchpoDtlRequest" resultType="map">
-		SELECT	MPD.PO_DTLCD AS "발주상세코드",
-				MP.MT_CD AS "자재코드",
-				MT.MT_NM AS "자재명",
-				VDR.VDR_NM AS "업체명",
-				MPD.PO_QTY "발주량"
-		FROM	MT_PODTL MPD,
-				MT_PO MP,
-				MT MT,
-				VENDOR VDR
-		WHERE	MPD.PO_CD = MP.PO_CD
-		AND		MP.MT_CD = MT.MT_CD
-		AND 	MP.VDR_CD = VDR.VDR_CD
+		SELECT  MP.PO_CD "발주코드", 
+		        TO_CHAR(MP.PO_REQDT, 'YYYY-MM-DD') "발주신청일", 
+		        E.EMP_NM "발주신청인"
+		FROM    MT_PO MP, EMPLOYEE E, MT_CHK MK
+		WHERE  	MP.EMP_NO = E.EMP_NO
+		AND    	MK.PO_CD(+) = MP.PO_CD
+		AND     MK.PO_CD IS NULL
 		<if test="mtName != ''">
-		AND 	MT.MT_NM LIKE '%' || #{mtName} || '%'
+		AND 	MP.PO_CD LIKE '%' || #{mtName} || '%'
 		</if>
 	</select>
 

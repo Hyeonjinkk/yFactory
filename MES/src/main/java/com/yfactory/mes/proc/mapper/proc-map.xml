@@ -109,7 +109,7 @@
 	</select>
 	<!-- 생산 계획 단건조회 -->
 	<select id="ProcPlanSelect" resultType="map">
-	  SELECT
+	  SELECT DISTINCT
       dtl.pp_cd "생산계획코드",
       pl.pp_nm "계획명",
       pd.prod_nm "완제품명",
