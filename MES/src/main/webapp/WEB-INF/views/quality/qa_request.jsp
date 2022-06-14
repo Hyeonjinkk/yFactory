@@ -90,7 +90,7 @@
                 text: '품질검사 신청이 완료되었습니다.',
             }).then(function(){
 				location.href = 'qa_requestMgr';
-            }
+            })
 		}).fail(function() {
 			Swal.fire({
                 icon: 'error',
