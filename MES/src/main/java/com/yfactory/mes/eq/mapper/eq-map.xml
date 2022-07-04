@@ -255,7 +255,7 @@ SELECT DISTINCT E.EQ_CD "설비코드"
 ,emp.emp_nm "검수자" 
 FROM EQ E , EQ_INA INA, PROCESS PRC ,EQ_CHK chk , comm_code comm , employee emp
 WHERE E.EQ_CD = INA.EQ_CD 
-AND E.EQ_cd = prc.eq_cd 
+AND E.EQ_cd = prc.eq_cd(+)
 AND E.EQ_CD = CHK.EQ_CD(+) 
 AND CHK.CHK_RSCD = COMM.COMM_CD(+)
 AND CHK.EQ_CHKR = EMP.EMP_NO
@@ -277,7 +277,7 @@ SELECT DISTINCT E.EQ_CD "설비코드"
 FROM EQ E , EQ_INA INA, PROCESS PRC
         ,EQ_CHK chk, COMM_CODE COMM
 WHERE E.EQ_CD = INA.EQ_CD
-AND E.EQ_cd = prc.eq_cd
+AND E.EQ_cd = prc.eq_cd(+)
 AND E.EQ_CD = CHK.EQ_CD(+)
 AND CHK.CHK_RSCD = COMM.COMM_CD(+)
 <!-- AND CHK.EQ_CHKDT IS NULL -->
